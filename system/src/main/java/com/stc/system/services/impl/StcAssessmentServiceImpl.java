@@ -149,7 +149,7 @@ public class StcAssessmentServiceImpl implements StcAssessmentService {
 
         if(fileMetaDataResponseList.isEmpty())
         {
-            new ResourceNotFoundException(String.format("Cannot Find File With Id:  %s", fileId));
+           throw  new ResourceNotFoundException(String.format("Cannot Find File With Id:  %s", fileId));
         }
 
         FileMetaDataResponse fileMetaDataResponse = fileMetaDataResponseList.get(0);
