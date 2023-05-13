@@ -28,6 +28,8 @@ public class PermissionGroup {
     @Column(name = "group_name")
     private String  groupName;
 
+    @OneToMany(mappedBy = "group")
+    private List<Permission> permissions;
 
 
 }

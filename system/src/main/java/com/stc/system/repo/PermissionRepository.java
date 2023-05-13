@@ -18,5 +18,5 @@ public interface PermissionRepository extends JpaRepository<Permission,Long> {
 
     public Optional<List<Permission>> getPermissionsByUserEmail(String userEmail);
 
-    public List<Permission> findPermissionByGroupIs(PermissionGroup group);
+    //public List<Permission> findPermissionByGroupIs(PermissionGroup group);
 }

@@ -1,0 +1,46 @@
+type Query {
+ files:[File]
+ getFileMetaDataById(fileId:ID!,userEmail:String!):FileMetaDataResponse
+}
+
+type Item {
+    id:ID!
+    type:ItemType
+    name:String!
+    permissionGroup:PermissionGroup
+    parent:Item
+    children:[Item]
+}
+
+type ItemType{
+    id:ID!
+    name:String!
+}
+
+type PermissionGroup{
+    id:ID!
+    groupName:String!
+    permissions:[Permission]
+}
+
+type File{
+    id:ID!
+    item:Item
+}
+
+type Permission{
+    userEmail:String!
+    permissionLevel:String!
+    group:PermissionGroup
+}
+
+
+type FileMetaDataResponse{
+    itemId:String!
+    fileId:String!
+    parentFolderId:String!
+    itemName:String!
+    type:String!
+    groupName:String!
+    parentItemName:String!
+}

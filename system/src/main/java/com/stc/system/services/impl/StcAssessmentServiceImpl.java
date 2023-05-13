@@ -161,6 +161,11 @@ public class StcAssessmentServiceImpl implements StcAssessmentService {
         return fileMetaDataResponse;
     }
 
+    @Override
+    public Iterable<File> getDataForGraphQl() {
+        return fileRepository.findAll();
+    }
+
 
     public CreateResponse createNewSpace(CreateRequest createRequest, ItemType itemType, PermissionGroup permissionGroup) {
         Item space = new Item();

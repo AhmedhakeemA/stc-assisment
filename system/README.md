@@ -26,6 +26,8 @@ docker compose up
 
 ```
 
+Note : please don't forget to build project 
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)

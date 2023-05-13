@@ -14,4 +14,6 @@ public interface StcAssessmentService {
 
     public FileMetaDataResponse getFileMetaData(Long id, String userEmail);
 
+    public Iterable<File> getDataForGraphQl();
+
 }
